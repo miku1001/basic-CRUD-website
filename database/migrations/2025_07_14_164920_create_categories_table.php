@@ -16,7 +16,7 @@ return new class extends Migration
             $table->timestamps();
             $table->string('name');
             $table->string('description');
-            $table->string('status')->default(1)->comment("1=visible, 0=hidden");
+            $table->float('grades');
         });
     }
 

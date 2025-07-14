@@ -18,7 +18,7 @@
                   <th>Id</th>
                   <th>Name</th>
                   <th>Description</th>
-                  <th>Status</th>
+                  <th>Grades</th>
                   <th>Action</th>
                 </tr>
                 <tbody>

@@ -26,9 +26,9 @@
                 @error('description') <span class="text-danger">{{$message}}</span> @enderror
               </div>
               <div class="mb-3">
-                <label for="">Status</label>
-                <input type="checkbox" name="status" /> Checked=visible, unchecked=hidden
-                @error('status') <span class="text-danger">{{$message}}</span> @enderror
+                <label for="">Grades</label>
+                <input type="number" name="grades" step="0.01" class="form-control" />
+                @error('grades') <span class="text-danger">{{$message}}</span> @enderror
               </div>
               <div class="mb-3">
                 <button type="submit" class="btn btn-primary">Submit</button>

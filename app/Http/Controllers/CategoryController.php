@@ -31,13 +31,13 @@ class CategoryController extends Controller
         $request->validate([
             'name'=> 'required|string|max:255',
             'description'=> 'required|string|max:255',
-            'status'=> 'nullable'
+            'status'=> 'required|numeric'
         ]);
 
         Category::create([
             'name' => $request->name,
             'description' => $request->description,
-            'status' => $request->status == true ? 1:0,
+            'grades' => $request->grades,
         ]);
 
         return redirect('/category')->with('status', 'Created Successsfully');
