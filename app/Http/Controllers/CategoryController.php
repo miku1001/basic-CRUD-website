@@ -31,7 +31,7 @@ class CategoryController extends Controller
         $request->validate([
             'name'=> 'required|string|max:255',
             'description'=> 'required|string|max:255',
-            'status'=> 'required|numeric'
+            'grades'=> 'required|numeric'
         ]);
 
         Category::create([
