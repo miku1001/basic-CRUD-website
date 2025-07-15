@@ -13,9 +13,7 @@ class CategoryController extends Controller
     public function index()
     {
         $categories = Category::get(); 
-        return view('category.index', [
-            'categories'=>$categories
-        ]);  
+        return view('category.index', compact('categories'));  
     }
 
     /**
