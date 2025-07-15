@@ -7,27 +7,28 @@
       <div class="col-md-12">
         <div class="card">
           <div class="card-header">
-            <h4>Edit Category List
+            <h4>Edit Student List
               <a href="{{url('/')}}" class="btn btn-danger float-end">Back</a>
             </h4>
           </div>
           <div class="card-body">
-            <form action="{{url("category")}}" method="POST">
+            <form action="{{route("category.update", $category->id)}}" method="POST">
               @csrf
+              @method('PUT')
 
               <div class="mb-3">
                 <label for="">Name</label>
-                <input type="text" name="name" class="form-control">
+                <input type="text" name="name" class="form-control" value ="{{$category->name}}">
                 @error('name') <span class="text-danger">{{$message}}</span> @enderror
               </div>
               <div class="mb-3">
-                <label for="">Description</label>
-                <textarea name="description" rows="3" class='form-control'></textarea>
+                <label for="">Remarks</label>
+                <textarea name="description" rows="3" class='form-control'>{{$category->description}}</textarea>
                 @error('description') <span class="text-danger">{{$message}}</span> @enderror
               </div>
               <div class="mb-3">
                 <label for="">Grades</label>
-                <input type="number" name="grades" step="0.01" class="form-control" />
+                <input type="number" name="grades" step="0.01" class="form-control" value ="{{$category->grades}}"/>
                 @error('grades') <span class="text-danger">{{$message}}</span> @enderror
               </div>
               <div class="mb-3">

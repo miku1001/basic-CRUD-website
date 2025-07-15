@@ -7,7 +7,7 @@
       <div class="col-md-12">
         <div class="card">
           <div class="card-header">
-            <h4>Category List
+            <h4>Student List
               <a href="{{url('/')}}" class="btn btn-danger float-end">Back</a>
             </h4>
           </div>
@@ -21,7 +21,7 @@
                 @error('name') <span class="text-danger">{{$message}}</span> @enderror
               </div>
               <div class="mb-3">
-                <label for="">Description</label>
+                <label for="">Remarks</label>
                 <textarea name="description" rows="3" class='form-control'></textarea>
                 @error('description') <span class="text-danger">{{$message}}</span> @enderror
               </div>

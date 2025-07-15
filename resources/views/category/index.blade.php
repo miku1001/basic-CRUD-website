@@ -5,10 +5,16 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
+
+        @session('status')
+        <div class="alert alert-success">
+          {{session('status')}}
+        </div>
+        @endsession
         <div class="card">
           <div class="card-header">
-            <h4>Category List
-              <a href="{{url('category/create')}}" class="btn btn-primary float-end">Add Category</a>
+            <h4>Student List
+              <a href="{{url('category/create')}}" class="btn btn-primary float-end">Add Student</a>
             </h4>
           </div>
           <div class="card-body">
@@ -17,7 +23,7 @@
                 <tr>
                   <th>Id</th>
                   <th>Name</th>
-                  <th>Description</th>
+                  <th>Remarks</th>
                   <th>Grades</th>
                   <th>Action</th>
                 </tr>
