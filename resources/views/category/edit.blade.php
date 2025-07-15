@@ -31,14 +31,14 @@
                 <input type="number" name="grades" step="0.01" class="form-control" value ="{{$category->grades}}"/>
                 @error('grades') <span class="text-danger">{{$message}}</span> @enderror
               </div>
-              <div class="mb-3">
+              <div class="mb-3 d-flex gap-2">
                 <button type="submit" class="btn btn-primary">Submit</button>
-                <form action="{{route('category.destroy', $category->id)}}" method="POST" style="display: inline;">
-                  @csrf
-                  @method('DELETE')
-                  <button type="submit" class="btn btn-danger">Delete</button>
-                </form>
               </div>
+            </form>
+            <form action="{{route('category.destroy', $category->id)}}" method="POST" style="display: inline;">
+              @csrf
+              @method('DELETE')
+              <button type="submit" class="btn btn-danger">Delete</button>
             </form>
           </div>
         </div>
