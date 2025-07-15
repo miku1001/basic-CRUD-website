@@ -79,7 +79,7 @@ class CategoryController extends Controller
             'grades' => $request->grades,
         ]);
 
-        return redirect('/category')->with('status', 'Updated Successsfully');
+        return redirect('/category')->with( 'status', 'Updated Successsfully');
     }
 
     /**
@@ -87,6 +87,8 @@ class CategoryController extends Controller
      */
     public function destroy(Category $category)
     {
-        //
+        $category->delete();
+        return redirect('/category')->with('status', 'Deleted Successsfully');
+
     }
 }

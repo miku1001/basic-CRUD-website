@@ -33,6 +33,11 @@
               </div>
               <div class="mb-3">
                 <button type="submit" class="btn btn-primary">Submit</button>
+                <form action="{{route('category.destroy', $category->id)}}" method="POST" style="display: inline;">
+                  @csrf
+                  @method('DELETE')
+                  <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
               </div>
             </form>
           </div>

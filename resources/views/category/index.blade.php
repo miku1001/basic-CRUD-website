@@ -37,8 +37,6 @@
                     <td>
                       <a href="{{route('category.edit', $category->id)}}" class="btn btn-success">Edit</a>
                       <a href="{{route('category.show', $category->id)}}" class="btn btn-info">Show</a>
-                      {{-- <a href="{{route('category.destroy')}}" class='btn btn-danger'>Delete</a> --}}
-                    </td>
                   </tr>
                   @endforeach
                 </tbody>
