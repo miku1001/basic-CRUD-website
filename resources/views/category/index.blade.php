@@ -25,6 +25,8 @@
                   <th>Name</th>
                   <th>Grade</th>
                   <th>Remarks</th>
+                  <th>Created Time</th>
+                  <th>Updated Time</th>
                   <th>Action</th>
                 </tr>
                 <tbody>
@@ -33,7 +35,9 @@
                     <td>{{$category->id}}</td>
                     <td>{{$category->name}}</td>
                     <td>{{$category->grades}}</td>
-                    <td>{{$category->description}}</td>
+                    <th>{{$category->description}}</th>
+                    <td>{{$category->created_at}}</td>
+                    <td>{{$category->updated_at}}</td>
                     <td>
                       <a href="{{route('category.edit', $category->id)}}" class="btn btn-success">Edit</a>
                       <a href="{{route('category.show', $category->id)}}" class="btn btn-info">Show</a>
