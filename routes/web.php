@@ -3,8 +3,6 @@
 use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route   ::get('/', [CategoryController::class, 'index']);
 
 Route::resource('category', CategoryController::class);

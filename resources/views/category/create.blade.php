@@ -8,7 +8,7 @@
         <div class="card">
           <div class="card-header">
             <h4>Category List
-              <a href="{{url('category/create')}}" class="btn btn-primary float-end">Add Category</a>
+              <a href="{{url('/')}}" class="btn btn-danger float-end">Back</a>
             </h4>
           </div>
           <div class="card-body">

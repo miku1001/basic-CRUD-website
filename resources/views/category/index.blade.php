@@ -22,13 +22,19 @@
                   <th>Action</th>
                 </tr>
                 <tbody>
+                  @foreach ($categories as $category)
                   <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>{{$category->id}}</td>
+                    <td>{{$category->name}}</td>
+                    <td>{{$category->grades}}</td>
+                    <td>{{$category->description}}</td>
+                    <td>
+                      <a href="{{route('category.edit', $category->id)}}" class="btn btn-success">Edit</a>
+                      <a href="{{route('category.show', $category->id)}}" class="btn btn-info">Show</a>
+                      {{-- <a href="{{route('category.destroy')}}" class='btn btn-danger'>Delete</a> --}}
+                    </td>
                   </tr>
+                  @endforeach
                 </tbody>
               </thead>
             </table>
