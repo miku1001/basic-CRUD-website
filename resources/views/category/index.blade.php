@@ -23,8 +23,8 @@
                 <tr>
                   <th>Id</th>
                   <th>Name</th>
+                  <th>Grade</th>
                   <th>Remarks</th>
-                  <th>Grades</th>
                   <th>Action</th>
                 </tr>
                 <tbody>

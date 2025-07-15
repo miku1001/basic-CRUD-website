@@ -7,7 +7,7 @@
       <div class="col-md-12">
         <div class="card">
           <div class="card-header">
-            <h4>Show Student Student
+            <h4>{{$category->name}}'s Details
               <a href="{{url('/')}}" class="btn btn-danger float-end">Back</a>
             </h4>
           </div>
@@ -30,9 +30,6 @@
               <p>
                 {{$category->grades}}
               </p>
-            </div>
-            <div class="mb-3">
-              <button type="submit" class="btn btn-primary">Submit</button>
             </div>
           </div>
         </div>

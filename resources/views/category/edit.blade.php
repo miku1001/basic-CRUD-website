@@ -7,7 +7,7 @@
       <div class="col-md-12">
         <div class="card">
           <div class="card-header">
-            <h4>Edit Student List
+            <h4>Edit Student Information
               <a href="{{url('/')}}" class="btn btn-danger float-end">Back</a>
             </h4>
           </div>
@@ -32,7 +32,7 @@
                 @error('grades') <span class="text-danger">{{$message}}</span> @enderror
               </div>
               <div class="mb-3 d-flex gap-2">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Update</button>
               </div>
             </form>
             <form action="{{route('category.destroy', $category->id)}}" method="POST" style="display: inline;">
