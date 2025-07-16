@@ -12,7 +12,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categories = Category::get(); 
+        $categories = Category::paginate(2);
         return view('category.index', compact('categories'));  
     }
 
@@ -64,7 +64,7 @@ class CategoryController extends Controller
         $validated = $request->validate([
             'name'=> 'required|string|max:255',
             'description'=> 'required|string|max:255',
-            'grades'=> 'required|numeric'
+            'grades'=> 'required|numeric|max: 100'
         ]);
 
         $category->update($validated);
