@@ -35,7 +35,7 @@
                     <td>{{$category->id}}</td>
                     <td>{{$category->name}}</td>
                     <td>{{$category->grades}}</td>
-                    <th>{{$category->description}}</th>
+                    <td>{{$category->description}}</td>
                     <td>{{$category->created_at}}</td>
                     <td>{{$category->updated_at}}</td>
                     <td>
